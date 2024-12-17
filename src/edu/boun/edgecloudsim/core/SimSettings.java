@@ -284,8 +284,17 @@ public class SimSettings {
 				CELLULARBASESTATIONWATTHOURPERBITDOWNLINK =(double) 12.7777777777778e-13 *Double.parseDouble(prop.getProperty("cellular_base_station_nanojoules_per_bit_down_link"));
 	//			CELLULARLATENCY =Double.parseDouble(prop.getProperty("cellular_latency"));
 				CONNECTIVITY_TYPE=prop.getProperty("connectivity_type").toString();
-			}
-			/**************************/
+			}else {
+
+				MIN_RAM_FOR_VM = Integer.parseInt(prop.getProperty("ram_for_mobile_vm"));
+				MIN_CORE_FOR_VM = Integer.parseInt(prop.getProperty("core_for_mobile_vm"));
+				MIN_MIPS_FOR_VM = Integer.parseInt(prop.getProperty("mips_for_mobile_vm"));
+				MIN_STORAGE_FOR_VM = Integer.parseInt(prop.getProperty("storage_for_mobile_vm"));
+				MAX_RAM_FOR_VM = Integer.parseInt(prop.getProperty("ram_for_mobile_vm"));
+				MAX_CORE_FOR_VM = Integer.parseInt(prop.getProperty("core_for_mobile_vm"));
+				MAX_MIPS_FOR_VM = Integer.parseInt(prop.getProperty("mips_for_mobile_vm"));
+				MAX_STORAGE_FOR_VM = Integer.parseInt(prop.getProperty("storage_for_mobile_vm"));
+			}			/**************************/
 			
 			
 			SIMULATION_TIME = (double)60 * Double.parseDouble(prop.getProperty("simulation_time")); //seconds
