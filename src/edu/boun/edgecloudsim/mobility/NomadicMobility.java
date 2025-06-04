@@ -83,7 +83,7 @@ public class NomadicMobility extends MobilityModel {
 				
 				while(placeFound == false){
 					int newDatacenterId = SimUtils.getRandomNumber(0,SimSettings.getInstance().getNumOfEdgeDatacenters()-1);
-					if(newDatacenterId != currentLocationId){
+					if(newDatacenterId != currentLocationId || SimSettings.getInstance().getNumOfEdgeDatacenters()==1){
 						placeFound = true;
 						Node datacenterNode = datacenterList.item(newDatacenterId);
 						Element datacenterElement = (Element) datacenterNode;
